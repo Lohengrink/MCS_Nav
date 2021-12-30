@@ -1,0 +1,10 @@
+# Raw ffid files are confidential.
+*.fid
+*.zip
+*.rar
+
+# Output nav files are confidential too.
+*.nav
+
+# jupyter notebook
+*.ipynb
