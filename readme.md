@@ -10,6 +10,7 @@ If you have not setup the enviorment for python, then follow the following step.
 1. Anaconda link: https://www.anaconda.com/products/individual
 2. VScode (Strongly recommend) link: https://code.visualstudio.com/download
 
+## Step:
 move fid2nav_Env.yml to C under user
 
 ```
