@@ -6,7 +6,6 @@ Created on Wed Dec 22 2021
 """
 import os
 import decimal
-import matplotlib.pyplot as plt
 import numpy as np
 import math
 from scipy import stats
@@ -115,7 +114,11 @@ def main(pathO, ffid_file):
     file_name = ffid_file.split('.')[0]  # 11290852
     file_type = ffid_file.split('.')[1]  # fid
 
-    input_file = pathO + '/input/' + file_name + '.' + file_type
+    input_folder_path = pathO + '/input/'
+    if not os.path.isdir(input_folder_path):  # if no folder, then create one.
+        os.makedirs(input_folder_path, mode=0o777)
+
+    input_file = input_folder_path + file_name + '.' + file_type
 
     # preparing the array
     DFSHD_1 = []  # string array
@@ -155,7 +158,11 @@ def main(pathO, ffid_file):
         print('Successfully Check!')
 
     # save new nav
-    path = pathO + '/output/' + file_name + '.nav'  # path important!
+    output_folder_path = pathO + '/output/'
+    if not os.path.isdir(output_folder_path):
+        os.makedirs(output_folder_path, mode=0o777)
+
+    path = output_folder_path + file_name + '.nav'  # path important!
     f = open(path, 'w')  # write
 
     for i in range(0, len(DFSHD_1), 1):
