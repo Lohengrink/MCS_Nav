@@ -62,7 +62,7 @@ conda activate fid2nav_Env
 當前方出現fid2nav_Env字樣，表示環境已切換成功。
 可以關閉power shell。
 
-到run.bat資料夾底下，點兩下執行f2n的主程式。
+到run.bat資料夾中，點兩下執行f2n的主程式。
 ![This is a alt text. activateEnvSuccessfully](/image/runSuccessfully.png "activateEnvSuccessfullyn")
 出現上方頁面，表示執行成功了！
 ## Library Requirement
