@@ -1,4 +1,5 @@
 # fid2Nav in Window
+## 簡介
 - "fid2Nav_in_Window"(後續簡稱為f2n) 這是一個由python寫成的小工具。
 其功能是將fid的檔案格式轉換成nav的檔案格式。同時，能夠抓出fid檔案之中，ffid有跳號，或是炸測秒數不規律的地方。
 (註：兩者皆為文字格式，僅是副檔名與內容排列方式不同而已)
@@ -35,7 +36,7 @@
     - ![This is a alt text. Start Anaconda](/image/StartAnaconda.png "Start Anaconda")
     - ![This is a alt text. Start Anaconda](/image/OpenPowerShell.png "Open powershell")
 
-#
+
 
 在power shell中
 ```
@@ -51,10 +52,8 @@ conda env create --file fid2nav_Env.yml --name fid2nav_Env
 ![This is a alt text. createEnvSuccessfully](/image/createEnvSuccessfully.png "createEnvSuccessfully")
 
 出現上圖表示執行成功！
-#
+
 接著請執行下面指令：
-
-
 ```
 conda activate fid2nav_Env
 ```
