@@ -1,9 +1,5 @@
 # fid2Nav in Window
 ## Introduction
-- "fid2Nav_in_Window"(後續簡稱為f2n) 這是一個由python寫成的小工具。
-其功能是將fid的檔案格式轉換成nav的檔案格式。同時，能夠抓出fid檔案之中，ffid有跳號，或是炸測秒數不規律的地方。
-(註：兩者皆為文字格式，僅是副檔名與內容排列方式不同而已)
-
 - "fid2Nav_in_Window" (hereinafter referred to as f2n) is a small tool written in python. Its function is to convert the file format of fid to the file format of nav. At the same time, in the fid file, f2n can figure out where the fid has a skip number, or the firing rate is irregular. (Note: Both of them are in text format, only the extension and content arrangement are different.)
 
 - If python has not been installed, it is recommended to install python and related software by referring to the following methods. (See ## Software Installation Requirements)
