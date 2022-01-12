@@ -7,3 +7,6 @@
 
 # jupyter notebook
 *.ipynb
+
+# temp
+test.py
