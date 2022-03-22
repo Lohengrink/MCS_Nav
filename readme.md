@@ -63,6 +63,7 @@ conda activate fid2nav_Env
 
 當前方出現fid2nav_Env字樣，表示環境已切換成功。
 可以關閉power shell。
+
 4. 執行之前，請先將run貓的檔名改成run蝙蝠。
 
 5. 一般情境下，僅需要點兩下run.bat即可以執行。而terminal視窗將會顯示出，fid檔案中有ffid跳號、炸點間距有誤的地方。
