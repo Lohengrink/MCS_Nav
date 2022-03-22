@@ -58,22 +58,31 @@ def shotIntervalCheck(DFSHD_1, time_sequence_sec, counter):
 
     delta_array = np.array(delta_array)
     shot_interval = stats.mode(delta_array)[0]  # most  freq number
+    allowed_range = 1
 
+    is_already_printed = True
     for i in range(0, len(delta_array), 1):
-        if(delta_array[i] != shot_interval):
-            counter += 1
+        # if(delta_array[i] != shot_interval):
+        no_problem_flag = (shot_interval - allowed_range) <= delta_array[i] <= (shot_interval + allowed_range)
+        
+        if(not(no_problem_flag)):
             sp = ' '
+            if(is_already_printed):
+                is_already_printed = False
+                string_shot_interval = str(shot_interval).replace('[','').replace(']','')
+                print(sp + ' Shot Interval used to test is' + sp + string_shot_interval + sp + 'and allowed range is +-' + sp + str(allowed_range))
+
+            counter += 1
             print(sp + ' Firing time problem: between' + sp + 'ffid# ' + str(DFSHD_1[i]) +
                   sp + 'and' + sp + 'ffid# ' + str(DFSHD_1[i+1]) + '!')
 
-    return delta_array
+    return counter
 
 
 def ffid_skip_check(ffid_sequence, counter):
     """
     check ffid sequence (small to big)
     """
-
     for i in range(0, len(ffid_sequence)-1, 1):
         next_ffid = ffid_sequence[i+1]
         this_ffid = ffid_sequence[i]
@@ -81,6 +90,7 @@ def ffid_skip_check(ffid_sequence, counter):
             counter += 1
             print(
                 f' Check output .nav! FFID number problem: between ffid# {this_ffid} and ffid# {next_ffid}!')
+    return counter                
 
 
 def deg2rad(deg):
@@ -149,13 +159,18 @@ def main(pathO, ffid_file):
 
     counter = 0
     # ffid skip check
-    ffid_skip_check(DFSHD_1, counter)
+    counter = ffid_skip_check(DFSHD_1, counter)
 
     # time check
-    shotIntervalCheck(DFSHD_1, hhmmss2ss(GPGLL_time), counter)
+    counter = shotIntervalCheck(DFSHD_1, hhmmss2ss(GPGLL_time), counter)
 
     if counter == 0:
-        print('Successfully Check!')
+        print('Checked Successfully!')
+    else:
+        print('Checked Successfully! But some problems are written above.')
+    print('------------------------------------')
+    print(' ')
+
 
     # save new nav
     output_folder_path = pathO + '/output/'

@@ -69,7 +69,7 @@ conda activate fid2nav_Env
 5. 一般情境下，僅需要點兩下run.bat即可以執行。而terminal視窗將會顯示出，fid檔案中有ffid跳號、炸點間距有誤的地方。
 
 到run.bat資料夾中，點兩下執行f2n的主程式。
-![This is a alt text. activateEnvSuccessfully](/image/runSuccessfully.png "activateEnvSuccessfullyn")
+![This is a alt text. activateEnvSuccessfully](/image/runSuccessfully-20220322.png "activateEnvSuccessfullyn")
 出現上方頁面，表示執行成功了！
 ## Library Requirement
 1. numpy
