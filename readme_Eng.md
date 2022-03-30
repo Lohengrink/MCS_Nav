@@ -28,12 +28,12 @@ In principle, it is not recommanded to open this folder and change its contents 
 Once Anaconda is downloaded, start the installation. 
 Pay attention to the place of [Environment Variables] during the installation process, it is strongly recommended to check it to avoid other problems in the future. (picture)
 
-    - ![This is a alt text. Links of image: https://miro.medium.com/max/496/1*02VfY6TA12kzmwmaCs1YFQ.png](/image/EnvVariable.png "Click the first checkbox, please.")
+- ![This is a alt text. Links of image: https://miro.medium.com/max/496/1*02VfY6TA12kzmwmaCs1YFQ.png](/image/EnvVariable.png "Click the first checkbox, please.")
 
 Once downloaded and installed, you can open Anaconda from window-Start and open a power shell.
     
-    - ![This is a alt text. Start Anaconda](/image/StartAnaconda.png "Start Anaconda")
-    - ![This is a alt text. Start Anaconda](/image/OpenPowerShell.png "Open powershell")
+- ![This is a alt text. Start Anaconda](/image/StartAnaconda.png "Start Anaconda")
+- ![This is a alt text. Start Anaconda](/image/OpenPowerShell.png "Open powershell")
 
 
 
@@ -64,7 +64,8 @@ conda activate fid2nav_Env
 The word fid2nav_Env appears on the front side, indicating that the environment has been switched successfully. Power shell can be closed.
 
 In the run.bat folder, double-click to execute the main program of f2n.
-![This is a alt text. activateEnvSuccessfully](/image/runSuccessfully.png "activateEnvSuccessfullyn")
+
+![This is a alt text. activateEnvSuccessfully](/image/runSuccessfully-20220322.png "activateEnvSuccessfullyn")
 The above page appears, indicating that the execution was successful!
 
 ## Library Requirement
